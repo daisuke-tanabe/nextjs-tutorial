@@ -1,0 +1,27 @@
+{
+  "presets": [
+    ["next/babel", {
+      "preset-env": {
+        "targets": {
+          "browsers": [
+            "last 1 Chrome version",
+            "last 1 Safari version",
+            "iOS >= 11",
+            "ChromeAndroid >= 8",
+            "ie >= 11",
+            "last 2 Edge version"
+          ]
+        }
+      }
+    },
+    "@babel/preset-flow"
+  ]],
+  "plugins": [
+    "transform-flow-strip-types",
+    ["styled-components", {
+      "ssr": true,
+      "displayName": true,
+      "preprocess": false
+    }]
+  ]
+}

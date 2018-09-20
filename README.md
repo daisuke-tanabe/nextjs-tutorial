@@ -1,3 +1,2 @@
-# Library on cloud
+# App Boiler Template
 
-Welcome to "Library on Cloud" !!
