@@ -49,13 +49,6 @@
     "node": "10.x.x"
   },
   "license": "ISC",
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "stylelint",
-      "git add"
-    ]
-  },
   "private": true,
   "repository": {
     "type": "git",
@@ -65,6 +58,7 @@
     "build": "next build ./src/client",
     "clean": "fixpack",
     "dev": "next ./src/client",
+    "export": "next export ./src/client --outdir ./out" ,
     "fix": "run-p fix:*",
     "fix:js": "eslint --fix ./src/client/pages",
     "fixpack": "fixpack",
@@ -72,7 +66,6 @@
     "lint": "run-p lint:*",
     "lint:js": "eslint ./src/client/pages",
     "lint:style": "stylelint ./src/client/pages",
-    "precommit": "lint-staged",
     "start": "next start ./src/client"
   }
 }

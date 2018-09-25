@@ -2,14 +2,20 @@ module.exports = {
   // dist対象ディレクトリからの相対パス
   distDir: '../../dist',
 
+  exportPathMap: defaultPathMap => {
+    return {
+      '/': { page: '/' },
+      '/about': { page: '/about' },
+    }
+  },
+
   webpack: config => {
     const preference = config;
 
     const loaders = [
       {
         test: /\.jsx?$/,
-        exclude: '/node_modules/',
-        use: ['eslint-loader', 'stylelint-custom-processor-loader']
+        exclude: '/node_modules/'
       },
       {
         test: /\.(png|jpg|gif)$/i,
