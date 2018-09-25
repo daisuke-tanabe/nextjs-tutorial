@@ -8,8 +8,7 @@ module.exports = {
     const loaders = [
       {
         test: /\.jsx?$/,
-        exclude: '/node_modules/',
-        use: ['eslint-loader', 'stylelint-custom-processor-loader']
+        exclude: '/node_modules/'
       },
       {
         test: /\.(png|jpg|gif)$/i,
